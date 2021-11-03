@@ -1,0 +1,30 @@
+{
+  "name": "mini-insta",
+  "version": "1.0.0",
+  "description": "- Login\r - Cadastro\r - Ver as informações do perfil dele\r - Editar dados do perfil\r - Ver postagens\r   - Ver quantidade de curtidas\r   - Ver comentários\r - Curtir postagens\r - Comentar postagem",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacapx/mini-insta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacapx/mini-insta/issues"
+  },
+  "homepage": "https://github.com/anacapx/mini-insta#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.13",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
