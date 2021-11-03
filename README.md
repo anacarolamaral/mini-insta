@@ -52,6 +52,7 @@
 
 #### Objetivos gerais
 -	Validar username e senha
+- Senha deve conter ao menos 5 caracteres
 -	Verificar se username já existe no banco de dados
 -	Criptografar senha
 -	Cadastrar o usuário no banco de dados

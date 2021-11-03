@@ -1,4 +1,4 @@
-const knex = require('knex');
+const knex = require('../conexao');
 const jwt = require('jsonwebtoken');
 const senhaHash = require('../senhaHash');
 
@@ -14,13 +14,13 @@ const verificaLogin = async (req, res, next) => {
 
     const { id } = jwt.verify(token, senhaHash);
 
-    const usuarioExistente = await knex('usuarios').where({ id }).first();
+    const usuarioEncontrado = await knex('usuarios').where({ id }).first();
 
-    if (!usuarioExistente) {
+    if (!usuarioEncontrado) {
       return res.status(404).json('Token inválido.')
     }
 
-    const { senha, ...usuario } = usuarioExistente;
+    const { senha, ...usuario } = usuarioEncontrado;
 
     req.usuario = usuario;
 
